@@ -1,0 +1,15 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name = "Suite1">
+   <test name = "test1">
+      <classes>
+        <!--  <class name = "testng_practice.TestNG_Test"/>
+         <class name = "testng_practice.TestNgAnnotation"/> -->
+         <!-- <class name = "testng_practice.TestNG_Assert_Example"/> -->
+         <class name = "assert_practice.SoftAssertExample"/>
+       <!--    <class name = "assert_practice.HardAssertExample"/> -->
+        
+      </classes>
+   </test>
+</suite>

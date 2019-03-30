@@ -1,3 +1,3 @@
 # junit_practice-
 
-FIrst test code of junit
+First test code of junit

@@ -2,6 +2,8 @@ package junit_practice;
 
 import java.util.concurrent.TimeUnit;
 
+import org.junit.After;
+import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -10,17 +12,14 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 
 public class FirstSeleniumTestCodeWithJunit {
+	WebDriver driver;
+	String user;
 	
-	@Test
-
-	
-	public void FirstJunitSeleniumTest() throws InterruptedException {
+	@Before
+	   public void before() {
 		
- String user = "firsttestcose17";
-		 
-		 /*
-		   
-		   OperaDriverService  service = new OperaDriverService.Builder()
+		/*
+		 OperaDriverService  service = new OperaDriverService.Builder()
 			         .usingDriverExecutable(new File("D:\\software\\browser\\Opera\\operadriver_win64\\operadriver_win64\\operadriver.exe"))
 			         .usingAnyFreePort()
 			         .build();
@@ -40,24 +39,25 @@ public class FirstSeleniumTestCodeWithJunit {
 		//WebDriver driver = new OperaDriver();	
 		//implicit wait
 		driver.manage().window().maximize();
+		*/
 		
-		
-		 */
-		
-		
-		
-		
-        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\driver\\chromedriver.exe");
-		
-		WebDriver driver = new ChromeDriver();
-		
-		// Maximize browser and put implicit wait
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
-		
-		//Open Orange HRM
-		driver.get("https://opensource-demo.orangehrmlive.com/index.php/auth/login");
-		
+		 user = "firsttestcose18";
+	     System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\driver\\chromedriver.exe");
+			
+			 driver = new ChromeDriver();
+			
+			// Maximize browser and put implicit wait
+			driver.manage().window().maximize();
+			driver.manage().timeouts().implicitlyWait(60,TimeUnit.SECONDS);
+			
+			//Open Orange HRM
+			driver.get("https://opensource-demo.orangehrmlive.com/index.php/auth/login");
+		 }
+	
+	
+	
+	@Test
+    public void FirstJunitSeleniumTest() throws InterruptedException {
 		
 		// Do login
 		 Thread.sleep(2000);
@@ -106,13 +106,17 @@ public class FirstSeleniumTestCodeWithJunit {
 		 driver.findElement(By.xpath("//a[text()='Logout']")).click();
 		 System.out.println("Logged out from user creation page");
 		 
-		 // Quit Application
-		 driver.quit();
-		
-	}  
+		 
+		 }  
 
 
-
+	 @After
+	   public void after() {
+	      System.out.println("in after");
+	      // Quit Application
+	       driver.quit();
+	      
+	   }
 
 
 

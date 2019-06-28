@@ -14,7 +14,7 @@ public class VerifyBrokenLinkExample2 {
 	public static void main(String[] args) throws InterruptedException {
 		
 		
-	       System.setProperty("webdriver.chrome.driver", "D:\\software\\selenium_standalone\\chromedriver_win32\\chromedriver.exe");
+	       System.setProperty("webdriver.chrome.driver", "D:\\manish_backup\\software\\browser\\chromedriver_win32\\chromedriver.exe");
 	      
 	       driver = new ChromeDriver();
 	     

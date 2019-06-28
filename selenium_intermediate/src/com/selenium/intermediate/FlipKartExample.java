@@ -13,14 +13,15 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class FlipKartExample {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
-       System.setProperty("webdriver.chrome.driver", "D:\\software\\selenium_standalone\\chromedriver_win32\\chromedriver.exe");
+       System.setProperty("webdriver.chrome.driver", "D:\\manish_backup\\software\\browser\\chromedriver_win32\\chromedriver.exe");
 		
 		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 		
 		driver.get("https://www.flipkart.com");
+		Thread.sleep(20000);
 		driver.findElement(By.xpath("//span[text()='Electronics']")).click();
 		WebDriverWait wait = new WebDriverWait(driver, 20);
 		WebElement element = wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//span[text()='Apple']"))));

@@ -15,8 +15,7 @@ public class FlipKartExample {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
-       System.setProperty("webdriver.chrome.driver", "D:\\manish_backup\\software\\browser\\chromedriver_win32\\chromedriver.exe");
-		
+		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\driver\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 		

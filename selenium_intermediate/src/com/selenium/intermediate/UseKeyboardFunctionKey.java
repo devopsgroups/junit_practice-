@@ -13,7 +13,7 @@ import org.openqa.selenium.interactions.Actions;
 public class UseKeyboardFunctionKey {
 
 	public static void main(String[] args) throws AWTException {
-		 System.setProperty("webdriver.chrome.driver", "D:\\software\\selenium_standalone\\chromedriver_win32\\chromedriver.exe");
+		 System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\driver\\chromedriver.exe");
 	      
 	      ChromeDriver driver = new ChromeDriver();
 	      driver.get("https://jqueryui.com/droppable/");

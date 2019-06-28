@@ -14,7 +14,7 @@ public class VerifyBrokenLink {
 
 	public static void main(String[] args) {
 		
-		 System.setProperty("webdriver.chrome.driver", "D:\\manish_backup\\software\\browser\\chromedriver_win32\\chromedriver.exe");
+		 System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\driver\\chromedriver.exe");
 	      
 	      ChromeDriver driver = new ChromeDriver();
 	      driver.get("https://jqueryui.com");

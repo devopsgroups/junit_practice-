@@ -11,7 +11,7 @@ public class DropDownWithouSelectClass {
 	public static void main(String[] args) {
 		
 		
-		System.setProperty("webdriver.chrome.driver", "D:\\software\\selenium_standalone\\chromedriver_win32\\chromedriver.exe");
+		 System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\driver\\chromedriver.exe");
 	      
 	      ChromeDriver driver = new ChromeDriver();
 	      driver.get("https://www.facebook.com/");

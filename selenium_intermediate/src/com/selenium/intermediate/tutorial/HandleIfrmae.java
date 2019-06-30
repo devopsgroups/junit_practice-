@@ -12,14 +12,14 @@ public class HandleIfrmae {
 	      driver.get("https://jqueryui.com/droppable/");
 	      
 	     
-	     // swith to frame by taking frame as webelement
+	     // Switch to frame by taking frame as WebElement
 	      
 	     driver.switchTo().frame(driver.findElement(By.xpath("//div[@id='content']/iframe")));
 	      
 	     
 	     System.out.println(driver.findElement(By.xpath("//p[contains(text(),'Drag me to my target')]")).getText());
 	    
-	     //driver.switchTo().defaultContent();
+	     driver.switchTo().defaultContent();
 	      
 	     System.out.println(driver.findElement(By.xpath("//p[contains(text(),'Enable any DOM element to be droppable, a target f')]")).getText());
 		    

@@ -16,7 +16,7 @@ public class ExampleOfJavaScriptExecutor {
 		
 		System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\driver\\chromedriver.exe");
 		WebDriver driver =  new  ChromeDriver();
-		driver.get("http://opensource.demo.orangehrmlive.com/");
+		driver.get("https://opensource-demo.orangehrmlive.com/");
 		
 		
 		WebElement element = driver.findElement(By.id("txtUsername"));
@@ -29,6 +29,8 @@ public class ExampleOfJavaScriptExecutor {
 		String original_style = element.getAttribute("style");
 		 
 		// Chnage style of element
+		
+		
 		 js.executeScript("arguments[0].setAttribute(arguments[1], arguments[2])",element,
 	   "style","border: 2px solid red; border-style: dashed;");
 	       

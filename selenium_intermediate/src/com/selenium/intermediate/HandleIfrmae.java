@@ -7,24 +7,23 @@ public class HandleIfrmae {
 
 	public static void main(String[] args) {
 		
-		 System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\driver\\chromedriver.exe");
+		  System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\driver\\chromedriver.exe");
 	      ChromeDriver driver = new ChromeDriver();
 	      driver.get("https://jqueryui.com/droppable/");
 	      
-	     // driver.findElement(By.xpath("//ul[@id='menu-top']/li[3]/a")).click();
-	      
-	      
-	      
-	      // swith to frame by index
-	     // driver.switchTo().frame(0);
-	      
-	   // swith to frame by taking frame as webelement
-	      driver.switchTo().frame(driver.findElement(By.xpath("//div[@id='content']/iframe")));
-	      
-	      driver.findElement(By.id("draggable")).click();
-	      
-	    
 	     
+	     // swith to frame by taking frame as webelement
+	      
+	     driver.switchTo().frame(driver.findElement(By.xpath("//div[@id='content']/iframe")));
+	      
+	     
+	     System.out.println(driver.findElement(By.xpath("//p[contains(text(),'Drag me to my target')]")).getText());
+	    
+	     //driver.switchTo().defaultContent();
+	      
+	     System.out.println(driver.findElement(By.xpath("//p[contains(text(),'Enable any DOM element to be droppable, a target f')]")).getText());
+		    
+	    
 	}
 
 }

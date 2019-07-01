@@ -1,4 +1,4 @@
-package com.selenium.intermediate;
+package com.selenium.intermediate.tutorial;
 
 import java.util.Iterator;
 import java.util.Set;

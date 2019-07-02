@@ -15,25 +15,41 @@ public class WindowsHandlers {
 		
       WebDriver driver = new ChromeDriver();
 		
-		driver.get("https://www.bseindia.com/");
+	  driver.get("https://www.bseindia.com/");
 		
-		driver.findElement(By.xpath("//div[@class='col-md-3 sociolinkarea1024']//li[1]//a[1]")).click();
+	  driver.findElement(By.xpath("//div[@class='col-md-3 sociolinkarea1024']//li[1]//a[1]")).click();
+	  
+	  Set<String> windowshandlers = driver.getWindowHandles();
+	  
+	  Iterator<String> it =   windowshandlers.iterator();
+	  
+	  String window1 = it.next();
+	  
+	  String window2 = it.next();
+	  
+	  driver.switchTo().window(window2);
+	  
+	  
+	  
+	  System.out.println("New window element: " +driver.findElement(By.xpath("//label[contains(text(),'Email or Phone')]")).getText());
+	  
+	  
+	  
+	  
+	  
+	
+	  
+	 
+	  
 		
-		Set<String> windowsHandlers = driver.getWindowHandles();
 		
-		Iterator<String> it =  windowsHandlers.iterator();
-		
-		String windows1 = it.next();
-		String windows2 = it.next();
-		
-		driver.switchTo().window(windows2);
 		
 		
 		
 		
 		
 	    
-	    System.out.println("Label of username fiels "+driver.findElement(By.xpath("//label[contains(text(),'Email or Phone')]")).getText());
+	    
 	    
 	    
 	    

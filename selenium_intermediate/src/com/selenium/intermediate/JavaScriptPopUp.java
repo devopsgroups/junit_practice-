@@ -28,7 +28,7 @@ public class JavaScriptPopUp {
 	       
 	       alt.accept();
 	       
-	       alt.dismiss();
+	       //alt.dismiss();
 	       
 	      
 	       

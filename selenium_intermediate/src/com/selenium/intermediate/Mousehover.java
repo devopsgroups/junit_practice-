@@ -6,7 +6,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-public class MouseOhver {
+public class Mousehover {
 
 	public static void main(String[] args) {
        
@@ -14,27 +14,27 @@ public class MouseOhver {
 		
 		 WebDriver driver = new ChromeDriver();
 		
-		 driver.get("http://opensource.demo.orangehrmlive.com/");
+		 driver.get("https://jqueryui.com/droppable/");
 		
 		
-	     driver.findElement(By.id("txtUsername")).sendKeys("admin");
+//	     driver.findElement(By.id("txtUsername")).sendKeys("admin");
+//	     
+//	     driver.findElement(By.id("txtPassword")).sendKeys("admin");
+//       
+//	      
+//	     driver.findElement(By.id("btnLogin")).click();
+//	     
+//	    // click on leave menu items
+//	     
+//	     driver.findElement(By.xpath("//a[@id='menu_admin_viewAdminModule']/b")).click();
 	     
-	     driver.findElement(By.id("txtPassword")).sendKeys("admin");
-       
-	      
-	     driver.findElement(By.id("btnLogin")).click();
-	     
-	    // click on leave menu items
-	     
-	     driver.findElement(By.xpath("//a[@id='menu_admin_viewAdminModule']/b")).click();
-	     
-	     WebElement jobelement = driver.findElement(By.id("menu_admin_Job"));
+	     WebElement jobelement = driver.findElement(By.xpath("//a[contains(text(),'Contribute')]"));
 	     
 	     Actions act = new Actions(driver); 
 	     
 	     act.moveToElement(jobelement).perform();
 	     
-	     driver.findElement(By.id("menu_admin_workShift")).click();;
+	     
 
 	}
 

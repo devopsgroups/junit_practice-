@@ -18,11 +18,13 @@ public class Test1 {
 		
 		driver.get("http://opensource.demo.orangehrmlive.com/");
 		
-		
+		driver.close();
+	       
 	     driver.findElement(By.id("txtUsername")).sendKeys("admin");
 	     
 	     driver.findElement(By.id("txtPassword")).sendKeys("admin");
-       
+	     
+	     
 	      
 	     driver.findElement(By.id("btnLogin")).click();
 	     

@@ -8,7 +8,7 @@ import org.openqa.selenium.interactions.Actions;
 
 public class OpenlinkInNewWindows {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		
 
 		 System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\driver\\chromedriver.exe");
@@ -23,8 +23,15 @@ public class OpenlinkInNewWindows {
 	      
 	      WebElement target = driver.findElement(By.xpath("//ul[@id='menu-top']/li[3]/a"));
 	      
-	      act.keyDown(Keys.SHIFT).click(target).keyUp(Keys.SHIFT).perform();	      
+	      act.keyDown(Keys.SHIFT).click(target).keyUp(Keys.SHIFT).perform();
+	      
+	      act.keyDown(Keys.SHIFT).click(target).keyUp(Keys.SHIFT).perform();	
+	      
+	      driver.close();
+	      
+	      Thread.sleep(5000);
 
+	      driver.quit();
 	}
 
 }

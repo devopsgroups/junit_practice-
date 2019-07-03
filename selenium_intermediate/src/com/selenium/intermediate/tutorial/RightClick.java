@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-public class RightClickExample {
+public class RightClick {
 
 	public static void main(String[] args) {
 		

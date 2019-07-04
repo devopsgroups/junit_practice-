@@ -1,4 +1,4 @@
-package com.selenium.intermediate;
+package com.selenium.intermediate.tutorial;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;

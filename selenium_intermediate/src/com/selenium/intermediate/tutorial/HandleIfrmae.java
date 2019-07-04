@@ -28,7 +28,7 @@ public class HandleIfrmae {
 	      driver.get("https://jqueryui.com/droppable/");
 	      
 	      
-	      driver.switchTo().frame(driver.findElement(By.xpath("//div[@id='content']/iframe")));
+	     // driver.switchTo().frame();
 	      
 	      System.out.println( driver.findElement(By.xpath("//div[@id='draggable']")).getText());
 	      

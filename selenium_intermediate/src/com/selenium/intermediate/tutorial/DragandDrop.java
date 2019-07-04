@@ -14,16 +14,18 @@ public class DragandDrop {
 	      ChromeDriver driver = new ChromeDriver();
 	      driver.get("https://jqueryui.com/droppable/");
 	      
-	      driver.switchTo().frame(driver.findElement(By.xpath("//div[@id='content']/iframe")));
+	      driver.switchTo().frame(driver.findElement(By.xpath("//iframe[@class='demo-frame']")));
+	      
+	      WebElement source = driver.findElement(By.xpath("//div[@id='draggable']"));
+	      
+	      WebElement target = driver.findElement(By.xpath("//div[@id='droppable']"));
 	      
 	      Actions act = new Actions(driver);
 	      
-	      WebElement  source = driver.findElement(By.id("draggable"));
+	      act.dragAndDrop(source, target).perform();
+	     
 	      
-	      WebElement target = driver.findElement(By.id("droppable"));
-	      
-	      act.dragAndDrop(source, target).build().perform();
-	      
+	     
 	      
 	     
 	}

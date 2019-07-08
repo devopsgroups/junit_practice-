@@ -19,7 +19,7 @@ public class ExecuteJavascriptExample {
 	      WebElement element = driver.findElement(By.xpath("//a[contains(text(),'Help')]"));
           Thread.sleep(5000);
 	      JavascriptExecutor js = (JavascriptExecutor) driver;
-	    //This will scroll the page till the element is found		
+	       //This will scroll the page till the element is found		
 	      js.executeScript("arguments[0].scrollIntoView();", element);
 	}
 

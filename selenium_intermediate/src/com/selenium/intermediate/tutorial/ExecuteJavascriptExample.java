@@ -7,6 +7,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class ExecuteJavascriptExample {
+	
+	  //Javascript to make element visilbe 
+    //"arguments[0].scrollIntoView()";
 
 	public static void main(String[] args) throws InterruptedException {
 	
@@ -16,11 +19,21 @@ public class ExecuteJavascriptExample {
 	     
 	       driver.get("https://www.facebook.com/");
 	       
-	      WebElement element = driver.findElement(By.xpath("//a[contains(text(),'Help')]"));
-          Thread.sleep(5000);
-	      JavascriptExecutor js = (JavascriptExecutor) driver;
-	       //This will scroll the page till the element is found		
-	      js.executeScript("arguments[0].scrollIntoView();", element);
+	           
+	       WebElement element = driver.findElement(By.xpath("//a[contains(text(),'Help')]"));
+	       
+	       Thread.sleep(2000);
+	       
+	       JavascriptExecutor js =  (JavascriptExecutor) driver;
+	       
+	       js.executeScript("arguments[0].scrollIntoView();", element);
+	       
+	       
+	       
+	       
+	    
+	       
+	     
 	}
 
 }

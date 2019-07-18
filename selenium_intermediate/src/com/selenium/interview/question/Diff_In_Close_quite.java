@@ -1,4 +1,4 @@
-package com.selenium.intermediate;
+package com.selenium.interview.question;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
@@ -6,18 +6,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
 
-public class OpenlinkInNewWindows {
+public class Diff_In_Close_quite {
 
 	public static void main(String[] args) throws InterruptedException {
-		
-
 		 System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\driver\\chromedriver.exe");
 	      
 	      ChromeDriver driver = new ChromeDriver();
 	      driver.get("https://jqueryui.com/droppable/");
 	      
 	      Actions act = new Actions(driver);
-	      
 	      
 	      // Shift + Click
 	      
@@ -27,7 +24,7 @@ public class OpenlinkInNewWindows {
 	      
 	      act.keyDown(Keys.SHIFT).click(target).keyUp(Keys.SHIFT).perform();	
 	      
-	    //  driver.close();
+	     //  driver.close();
 	      
 	      Thread.sleep(10000);
 
@@ -36,3 +33,5 @@ public class OpenlinkInNewWindows {
 	}
 
 }
+
+
